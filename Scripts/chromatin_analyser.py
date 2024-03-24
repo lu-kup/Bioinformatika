@@ -6,6 +6,7 @@ from hmmlearn import hmm
 
 START_18 = 3000000
 END_18 = 91000000
+CHROMOSOME_NO = '18'
 
 def add_bins(offset, chromosome):
     breaks = list(np.arange(START_18 + offset, END_18, 100))
@@ -56,7 +57,7 @@ def main():
     print(df.head())
     print()
 
-    chromosome = df[df['seqnames'] == '18']
+    chromosome = df[df['seqnames'] == CHROMOSOME_NO]
 
     chromosome.sort_values('start', inplace = True)
 
