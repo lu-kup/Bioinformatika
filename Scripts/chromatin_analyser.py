@@ -52,9 +52,11 @@ def get_hidden_states(offset, chromosome):
     return predicted_states
 
 def main():
-    result = pyreadr.read_r('Data/exampleForLukas.RDS')
+    result = pyreadr.read_r('../Data/exampleForLukas.RDS')
     df = result[None]
     print(df.head())
+    print(df["start"].min())
+    print(df["start"].max())
     print()
 
     chromosome = df[df['seqnames'] == CHROMOSOME_NO]
@@ -81,7 +83,7 @@ def main():
     chromosome = chromosome[chromosome.columns.drop(list(chromosome.filter(regex='bin_offset_')))]
     chromosome = chromosome[chromosome.columns.drop(list(chromosome.filter(regex='predicted_state_')))]
 
-    chromosome.to_pickle('Data/out.pkl')
+    chromosome.to_pickle('Data/out2.pkl')
 
     #result = np.asarray(res)
 
