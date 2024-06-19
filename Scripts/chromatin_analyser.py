@@ -42,8 +42,6 @@ def get_hidden_states(offset, chromosome):
     model.transmat_ = np.array([[0.5, 0.5], [0.5, 0.5]])
     model.fit(signals)
 
-    # use the Viterbi algorithm to predict the most likely sequence of states
-    # given the model
     predicted_states = model.predict(signals)
 
     print(f'Transmission matrix Recovered:\n{model.transmat_.round(3)}\n\n')
