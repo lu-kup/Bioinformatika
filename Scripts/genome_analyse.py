@@ -21,7 +21,6 @@ hstates = np.random.randint(2, size = 70376)
 print(hstates)
 
 
-# split our data into training and validation sets (50/50 split)
 X_train = signals[:signals.shape[0] // 2]
 X_validate = signals[signals.shape[0] // 2:]
 
@@ -33,8 +32,6 @@ model.transmat_ = np.array([[0.5, 0.5], [0.5, 0.5]])
 # print(model.transmat_.shape)
 model.fit(signals)
 
-# use the Viterbi algorithm to predict the most likely sequence of states
-# given the model
 predicted_states = model.predict(signals)
 
 print(f'Transmission matrix Recovered:\n{model.transmat_.round(3)}\n\n')

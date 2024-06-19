@@ -3,14 +3,14 @@ import numpy as np
 import random
 import string
 
-# Generate random integers
+
 integers = [random.randint(1, 100) for _ in range(10)]
 integers2 = [_ + 1 for _ in integers]
 
-# Generate random characters
+
 characters = [''.join(random.choices(string.ascii_letters, k=1)) for _ in range(10)]
 
-# Create DataFrame
+
 df = pd.DataFrame({'Integers': integers, 'Integers2': integers2, 'Characters': characters})
 
 print(df)

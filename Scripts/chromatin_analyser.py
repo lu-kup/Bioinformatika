@@ -83,10 +83,6 @@ def main():
 
     chromosome.to_pickle('Data/out2.pkl')
 
-    #result = np.asarray(res)
-
-    #print("RESULTS")
-    #print(result)
 
 if __name__ == "__main__":
     main()

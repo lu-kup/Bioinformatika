@@ -18,7 +18,6 @@ print(df_3.head())
 print()
 
 milijonas = df.iloc[5000000:6000000, 1]
-#s0 = milijonas['TT_S0']
 print(milijonas.head())
 
 print(df.head())
